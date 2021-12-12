@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -36,6 +37,12 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.darkmode = new System.Windows.Forms.CheckBox();
+            this.currencies = new CurrencyCalculator.currencies();
+            this.currenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.currenciesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,15 +58,15 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.currenciesBindingSource1;
+            this.comboBox1.DisplayMember = "currency";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "USD",
-            "GBP"});
             this.comboBox1.Location = new System.Drawing.Point(38, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.ValueMember = "currency";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
@@ -128,6 +135,21 @@
             this.darkmode.UseVisualStyleBackColor = true;
             this.darkmode.CheckedChanged += new System.EventHandler(this.darkmode_CheckedChanged);
             // 
+            // currencies
+            // 
+            this.currencies.DataSetName = "currencies";
+            this.currencies.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // currenciesBindingSource
+            // 
+            this.currenciesBindingSource.DataSource = this.currencies;
+            this.currenciesBindingSource.Position = 0;
+            // 
+            // currenciesBindingSource1
+            // 
+            this.currenciesBindingSource1.DataMember = "currencies";
+            this.currenciesBindingSource1.DataSource = this.currenciesBindingSource;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +167,9 @@
             this.Name = "Form1";
             this.Text = "Currency Converter";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.currencies)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +185,9 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.CheckBox darkmode;
+        private System.Windows.Forms.BindingSource currenciesBindingSource1;
+        private System.Windows.Forms.BindingSource currenciesBindingSource;
+        private currencies currencies;
     }
 }
 
