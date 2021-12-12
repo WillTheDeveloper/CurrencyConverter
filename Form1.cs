@@ -54,19 +54,25 @@ namespace CurrencyCalculator
         private void darkmode_CheckedChanged(object sender, EventArgs e)
         {
             var status = darkmode.Checked;
-
-            var control = new Form().ActiveControl;
-
+            
             switch (status)
             {
                 case (true):
-                    control.BackColor = Color.Black;
+                    Form1.ActiveForm.BackColor = Color.Black;
                     label1.ForeColor = Color.White;
+                    label2.ForeColor = Color.White;
+                    label3.ForeColor = Color.White;
+                    richTextBox1.ForeColor = Color.DarkGray;
+                    richTextBox2.ForeColor = Color.DarkGray;
                     break;
 
                 case (false):
-                    control.BackColor = Color.LightGray;
+                    Form1.ActiveForm.BackColor = Color.LightGray;
                     label1.ForeColor = Color.Black;
+                    label2.ForeColor = Color.Black;
+                    label3.ForeColor = Color.Black;
+                    richTextBox1.ForeColor = Color.White;
+                    richTextBox2.ForeColor= Color.White;
                     break;
             }
         }
