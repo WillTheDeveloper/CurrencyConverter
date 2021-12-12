@@ -187,7 +187,7 @@
         private System.Windows.Forms.CheckBox darkmode;
         private System.Windows.Forms.BindingSource currenciesBindingSource1;
         private System.Windows.Forms.BindingSource currenciesBindingSource;
-        private currencies currencies;
+        public currencies currencies;
     }
 }
 
