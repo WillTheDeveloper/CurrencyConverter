@@ -38,12 +38,10 @@ namespace CurrencyCalculator
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            var select1 = comboBox1.SelectedItem as string;
-            var select2 = comboBox2.SelectedItem as string;
+            string value1 = richTextBox1.Text;
+            string value2 = richTextBox2.Text;
 
-            var input1 = richTextBox1.Text;
-            var input2 = richTextBox2.Text;
-
+            value2 = value1;
             
         }
 
