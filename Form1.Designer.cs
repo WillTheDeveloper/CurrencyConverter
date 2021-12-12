@@ -53,12 +53,8 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "US Dollar (USD)",
-            "Euro (EUR)",
-            "Pound Sterling (GBP)",
-            "Australian Dollar (AUD)",
-            "Canadian Dollar (CAD)",
-            "Swiss Franc (CHF)"});
+            "USD",
+            "GBP"});
             this.comboBox1.Location = new System.Drawing.Point(38, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
@@ -70,12 +66,8 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "US Dollar (USD)",
-            "Euro (EUR)",
-            "Pound Sterling (GBP)",
-            "Australian Dollar (AUD)",
-            "Canadian Dollar (CAD)",
-            "Swiss Franc (CHF)"});
+            "USD",
+            "GBP"});
             this.comboBox2.Location = new System.Drawing.Point(439, 78);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(289, 21);
@@ -121,6 +113,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(285, 61);
             this.richTextBox2.TabIndex = 6;
             this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // Form1
             // 
@@ -136,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Currency Converter";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
