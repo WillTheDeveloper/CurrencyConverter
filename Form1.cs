@@ -47,12 +47,28 @@ namespace CurrencyCalculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void darkmode_CheckedChanged(object sender, EventArgs e)
+        {
+            var status = darkmode.Checked;
+
+            switch (status)
+            {
+                case (true):
+                    
+                    break;
+
+                case (false):
+                    
+                    break;
+            }
         }
     }
 }

@@ -126,11 +126,13 @@
             this.darkmode.TabIndex = 7;
             this.darkmode.Text = "Dark Mode";
             this.darkmode.UseVisualStyleBackColor = true;
+            this.darkmode.CheckedChanged += new System.EventHandler(this.darkmode_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.darkmode);
             this.Controls.Add(this.richTextBox2);
