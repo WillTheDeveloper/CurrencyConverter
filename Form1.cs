@@ -59,14 +59,18 @@ namespace CurrencyCalculator
         {
             var status = darkmode.Checked;
 
+            var control = new Form().ActiveControl;
+
             switch (status)
             {
                 case (true):
-                    
+                    control.BackColor = Color.Black;
+                    label1.ForeColor = Color.White;
                     break;
 
                 case (false):
-                    
+                    control.BackColor = Color.LightGray;
+                    label1.ForeColor = Color.Black;
                     break;
             }
         }
