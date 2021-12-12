@@ -59,7 +59,7 @@
             "Australian Dollar (AUD)",
             "Canadian Dollar (CAD)",
             "Swiss Franc (CHF)"});
-            this.comboBox1.Location = new System.Drawing.Point(35, 121);
+            this.comboBox1.Location = new System.Drawing.Point(38, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
             this.comboBox1.TabIndex = 1;
@@ -76,7 +76,7 @@
             "Australian Dollar (AUD)",
             "Canadian Dollar (CAD)",
             "Swiss Franc (CHF)"});
-            this.comboBox2.Location = new System.Drawing.Point(436, 121);
+            this.comboBox2.Location = new System.Drawing.Point(439, 78);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(289, 21);
             this.comboBox2.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 98);
+            this.label2.Location = new System.Drawing.Point(34, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 98);
+            this.label3.Location = new System.Drawing.Point(435, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 4;
@@ -105,7 +105,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(35, 165);
+            this.richTextBox1.Location = new System.Drawing.Point(38, 122);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(285, 61);
             this.richTextBox1.TabIndex = 5;
@@ -115,7 +115,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(436, 165);
+            this.richTextBox2.Location = new System.Drawing.Point(439, 122);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(285, 61);
