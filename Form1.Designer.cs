@@ -48,6 +48,10 @@
             this.convertRateTo = new System.Windows.Forms.Label();
             this.toRate = new System.Windows.Forms.Label();
             this.fromRate = new System.Windows.Forms.Label();
+            this.usdRate = new System.Windows.Forms.Label();
+            this.gbpRate = new System.Windows.Forms.Label();
+            this.gbplabel = new System.Windows.Forms.Label();
+            this.usdlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
@@ -224,12 +228,56 @@
             this.fromRate.Text = "fromRate";
             this.fromRate.Click += new System.EventHandler(this.fromRate_Click);
             // 
+            // usdRate
+            // 
+            this.usdRate.AutoSize = true;
+            this.usdRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usdRate.Location = new System.Drawing.Point(398, 246);
+            this.usdRate.Name = "usdRate";
+            this.usdRate.Size = new System.Drawing.Size(87, 20);
+            this.usdRate.TabIndex = 15;
+            this.usdRate.Text = "USD Rate:";
+            // 
+            // gbpRate
+            // 
+            this.gbpRate.AutoSize = true;
+            this.gbpRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbpRate.Location = new System.Drawing.Point(399, 266);
+            this.gbpRate.Name = "gbpRate";
+            this.gbpRate.Size = new System.Drawing.Size(86, 20);
+            this.gbpRate.TabIndex = 16;
+            this.gbpRate.Text = "GBP Rate:";
+            // 
+            // gbplabel
+            // 
+            this.gbplabel.AutoSize = true;
+            this.gbplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbplabel.Location = new System.Drawing.Point(491, 266);
+            this.gbplabel.Name = "gbplabel";
+            this.gbplabel.Size = new System.Drawing.Size(36, 20);
+            this.gbplabel.TabIndex = 17;
+            this.gbplabel.Text = "gbp";
+            // 
+            // usdlabel
+            // 
+            this.usdlabel.AutoSize = true;
+            this.usdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usdlabel.Location = new System.Drawing.Point(491, 246);
+            this.usdlabel.Name = "usdlabel";
+            this.usdlabel.Size = new System.Drawing.Size(35, 20);
+            this.usdlabel.TabIndex = 18;
+            this.usdlabel.Text = "usd";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.usdlabel);
+            this.Controls.Add(this.gbplabel);
+            this.Controls.Add(this.gbpRate);
+            this.Controls.Add(this.usdRate);
             this.Controls.Add(this.fromRate);
             this.Controls.Add(this.toRate);
             this.Controls.Add(this.convertRateTo);
@@ -277,6 +325,10 @@
         private System.Windows.Forms.Label convertRateTo;
         private System.Windows.Forms.Label toRate;
         private System.Windows.Forms.Label fromRate;
+        private System.Windows.Forms.Label usdRate;
+        private System.Windows.Forms.Label gbpRate;
+        private System.Windows.Forms.Label gbplabel;
+        private System.Windows.Forms.Label usdlabel;
     }
 }
 

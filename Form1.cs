@@ -13,6 +13,9 @@ namespace CurrencyCalculator
 {
     public partial class Form1 : Form
     {
+        double USD = 0.5;
+        double GBP = 0.85;
+
         public Form1()
         {
             InitializeComponent();
