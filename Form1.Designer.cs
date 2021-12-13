@@ -44,6 +44,10 @@
             this.minus1 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.convertRateFrom = new System.Windows.Forms.Label();
+            this.convertRateTo = new System.Windows.Forms.Label();
+            this.toRate = new System.Windows.Forms.Label();
+            this.fromRate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
@@ -178,12 +182,58 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
+            // convertRateFrom
+            // 
+            this.convertRateFrom.AutoSize = true;
+            this.convertRateFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertRateFrom.Location = new System.Drawing.Point(41, 246);
+            this.convertRateFrom.Name = "convertRateFrom";
+            this.convertRateFrom.Size = new System.Drawing.Size(158, 20);
+            this.convertRateFrom.TabIndex = 11;
+            this.convertRateFrom.Text = "Convert Rate (From):";
+            // 
+            // convertRateTo
+            // 
+            this.convertRateTo.AutoSize = true;
+            this.convertRateTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertRateTo.Location = new System.Drawing.Point(41, 266);
+            this.convertRateTo.Name = "convertRateTo";
+            this.convertRateTo.Size = new System.Drawing.Size(139, 20);
+            this.convertRateTo.TabIndex = 12;
+            this.convertRateTo.Text = "Convert Rate (To):";
+            // 
+            // toRate
+            // 
+            this.toRate.AutoSize = true;
+            this.toRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toRate.Location = new System.Drawing.Point(186, 266);
+            this.toRate.Name = "toRate";
+            this.toRate.Size = new System.Drawing.Size(58, 20);
+            this.toRate.TabIndex = 13;
+            this.toRate.Text = "toRate";
+            this.toRate.Click += new System.EventHandler(this.toRate_Click);
+            // 
+            // fromRate
+            // 
+            this.fromRate.AutoSize = true;
+            this.fromRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromRate.Location = new System.Drawing.Point(205, 246);
+            this.fromRate.Name = "fromRate";
+            this.fromRate.Size = new System.Drawing.Size(76, 20);
+            this.fromRate.TabIndex = 14;
+            this.fromRate.Text = "fromRate";
+            this.fromRate.Click += new System.EventHandler(this.fromRate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fromRate);
+            this.Controls.Add(this.toRate);
+            this.Controls.Add(this.convertRateTo);
+            this.Controls.Add(this.convertRateFrom);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.minus1);
             this.Controls.Add(this.plus1);
@@ -223,6 +273,10 @@
         private System.Windows.Forms.Button minus1;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Label convertRateFrom;
+        private System.Windows.Forms.Label convertRateTo;
+        private System.Windows.Forms.Label toRate;
+        private System.Windows.Forms.Label fromRate;
     }
 }
 

@@ -113,5 +113,15 @@ namespace CurrencyCalculator
             comboBox1.SelectedItem = "";
             comboBox2.SelectedItem = "";
         }
+
+        private void fromRate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toRate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
