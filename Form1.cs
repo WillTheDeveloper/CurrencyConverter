@@ -76,5 +76,23 @@ namespace CurrencyCalculator
                     break;
             }
         }
+
+        private void plus1_Click(object sender, EventArgs e)
+        {
+            if(richTextBox1.Text == null)
+            {
+                richTextBox1.Text = "1";
+            }
+            else
+            {
+                int a = Int32.Parse(richTextBox1.Text);
+                //richTextBox1.Text
+            }
+        }
+
+        private void minus1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

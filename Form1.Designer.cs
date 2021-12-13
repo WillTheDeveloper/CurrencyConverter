@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.currenciesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.currenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.currencies = new CurrencyCalculator.currencies();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.darkmode = new System.Windows.Forms.CheckBox();
-            this.currencies = new CurrencyCalculator.currencies();
-            this.currenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.currenciesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.plus1 = new System.Windows.Forms.Button();
+            this.minus1 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +71,21 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "currency";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // currenciesBindingSource1
+            // 
+            this.currenciesBindingSource1.DataMember = "currencies";
+            this.currenciesBindingSource1.DataSource = this.currenciesBindingSource;
+            // 
+            // currenciesBindingSource
+            // 
+            this.currenciesBindingSource.DataSource = this.currencies;
+            this.currenciesBindingSource.Position = 0;
+            // 
+            // currencies
+            // 
+            this.currencies.DataSetName = "currencies";
+            this.currencies.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBox2
             // 
@@ -138,38 +153,25 @@
             this.darkmode.UseVisualStyleBackColor = true;
             this.darkmode.CheckedChanged += new System.EventHandler(this.darkmode_CheckedChanged);
             // 
-            // currencies
+            // plus1
             // 
-            this.currencies.DataSetName = "currencies";
-            this.currencies.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.plus1.Location = new System.Drawing.Point(38, 189);
+            this.plus1.Name = "plus1";
+            this.plus1.Size = new System.Drawing.Size(24, 23);
+            this.plus1.TabIndex = 8;
+            this.plus1.Text = "+";
+            this.plus1.UseVisualStyleBackColor = true;
+            this.plus1.Click += new System.EventHandler(this.plus1_Click);
             // 
-            // currenciesBindingSource
+            // minus1
             // 
-            this.currenciesBindingSource.DataSource = this.currencies;
-            this.currenciesBindingSource.Position = 0;
-            // 
-            // currenciesBindingSource1
-            // 
-            this.currenciesBindingSource1.DataMember = "currencies";
-            this.currenciesBindingSource1.DataSource = this.currenciesBindingSource;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(38, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(68, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.minus1.Location = new System.Drawing.Point(68, 189);
+            this.minus1.Name = "minus1";
+            this.minus1.Size = new System.Drawing.Size(24, 23);
+            this.minus1.TabIndex = 9;
+            this.minus1.Text = "-";
+            this.minus1.UseVisualStyleBackColor = true;
+            this.minus1.Click += new System.EventHandler(this.minus1_Click);
             // 
             // Form1
             // 
@@ -177,8 +179,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.minus1);
+            this.Controls.Add(this.plus1);
             this.Controls.Add(this.darkmode);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
@@ -190,9 +192,9 @@
             this.Name = "Form1";
             this.Text = "Currency Converter";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.currencies)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,8 +213,8 @@
         private System.Windows.Forms.BindingSource currenciesBindingSource1;
         private System.Windows.Forms.BindingSource currenciesBindingSource;
         public currencies currencies;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button plus1;
+        private System.Windows.Forms.Button minus1;
         private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
