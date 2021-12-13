@@ -35,11 +35,7 @@ namespace CurrencyCalculator
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            string value1 = richTextBox1.Text;
-            string value2 = richTextBox2.Text;
-
-            value2 = value1;
-            
+            richTextBox2.Text = richTextBox1.Text;
         }
 
         private void Form1_Load(object sender, EventArgs e)
