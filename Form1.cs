@@ -108,5 +108,10 @@ namespace CurrencyCalculator
                 richTextBox1.Text = b.ToString();
             }
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

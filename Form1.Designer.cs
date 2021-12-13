@@ -43,6 +43,7 @@
             this.plus1 = new System.Windows.Forms.Button();
             this.minus1 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.clearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencies)).BeginInit();
@@ -173,12 +174,23 @@
             this.minus1.UseVisualStyleBackColor = true;
             this.minus1.Click += new System.EventHandler(this.minus1_Click);
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(709, 32);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn.TabIndex = 10;
+            this.clearBtn.Text = "Clear All";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.minus1);
             this.Controls.Add(this.plus1);
             this.Controls.Add(this.darkmode);
@@ -216,6 +228,7 @@
         private System.Windows.Forms.Button plus1;
         private System.Windows.Forms.Button minus1;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
 
