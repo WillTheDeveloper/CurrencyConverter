@@ -79,20 +79,34 @@ namespace CurrencyCalculator
 
         private void plus1_Click(object sender, EventArgs e)
         {
-            if(richTextBox1.Text == null)
+            if (richTextBox1.Text == "")
             {
                 richTextBox1.Text = "1";
             }
-            else
+            else if (richTextBox1.Text != "")
             {
                 int a = Int32.Parse(richTextBox1.Text);
-                //richTextBox1.Text
+                int b = ++a;
+                richTextBox1.Text = b.ToString();
             }
         }
 
         private void minus1_Click(object sender, EventArgs e)
         {
-
+            if (richTextBox1.Text == "")
+            {
+                richTextBox1.Text = "1";
+            }
+            else if (richTextBox1.Text == "0")
+            {
+                //Nothing should happen
+            }
+            else if (richTextBox1.Text != "1")
+            {
+                int a = Int32.Parse(richTextBox1.Text);
+                int b = --a;
+                richTextBox1.Text = b.ToString();
+            }
         }
     }
 }
