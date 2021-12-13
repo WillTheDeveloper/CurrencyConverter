@@ -111,7 +111,10 @@ namespace CurrencyCalculator
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+            comboBox1.SelectedItem = "";
+            comboBox2.SelectedItem = "";
         }
     }
 }
