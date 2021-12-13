@@ -62,15 +62,12 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.currenciesBindingSource1;
-            this.comboBox1.DisplayMember = "currency";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(38, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "currency";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // currenciesBindingSource1
@@ -92,9 +89,6 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "USD",
-            "GBP"});
             this.comboBox2.Location = new System.Drawing.Point(439, 78);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(289, 21);
