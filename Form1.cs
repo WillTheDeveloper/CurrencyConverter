@@ -43,7 +43,8 @@ namespace CurrencyCalculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            usdlabel.Text = USD.ToString();
+            gbplabel.Text = GBP.ToString();
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
